@@ -1,0 +1,31 @@
+
+""" PYTHON ITERATORS """
+#iterator is an object that contains a contable number of values
+# _iter_() & _next_()
+class MyNumbers:
+  def __iter__(self):
+    self.a = 1
+    return self
+# similar to _init_() but must always return th itirator obj itself
+  def __next__(self):
+    if self.a >= 20:
+     x = self.a
+     self.a += 1
+     return x
+    else:
+        raise StopIteration 
+# adding the termination conditon to raise an error if the 
+#iteration is done a specified number of times
+ 
+
+# must return the next item in the sequence
+
+
+myclass = MyNumbers()
+myiter = iter(myclass)
+
+print(next(myiter))
+print(next(myiter))
+print(next(myiter))
+print(next(myiter))
+print(next(myiter))

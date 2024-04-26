@@ -1,0 +1,77 @@
+#--------------- LISTTT---------------------------------------------------------------------
+
+
+meals = [ "egg", "bread", "Milk", "tea" ]
+new = [ True, 1, "hello"]
+print(new[0])
+print(meals)
+print(meals[2])
+
+print(len(meals))
+#Wmost common method of list are pop append and sort
+list = [ 1, 2, 3, 4, 5]
+print(list)
+list.pop(1)# it delete the data from the list
+print(list)
+
+list.append(100) #it adds data at the end of the list
+print(list)
+
+list.sort() #it sorts the data upper case at the first
+list[2] = "value"
+#we can also update value like this
+print(list)
+
+
+#using loops in list
+for lists in list:
+    print(list)
+
+for index in range(len(meals)):
+    meals[index] = meals[index].upper()
+    print(meals)
+print(meals)
+
+for x in meals:
+    print(x)
+
+    
+""" -------- DICTIONARY-----------------------------------------------------------------------"""
+myDictionary = {
+    "breakfast": "eggs",
+    "lunch":"sandwich",
+    "dinner": "potato",
+    "desert":"cake"
+}
+
+print(myDictionary)
+print(myDictionary["breakfast"])#geyt something out of the dictionary
+print(len(myDictionary))
+myDictionary.update({"breakfast":"toast"})
+#this wil update the value of breakfast
+myDictionary.pop("lunch")
+#this will remove key value of lunch
+print(myDictionary)
+
+
+#------------------------------------- TUPLES ----------------------------------------------
+#tupples are immutable 
+#you cannot edit the items in the tupple
+#you can only create a new one
+
+tupple = (1,2,3,4,5,6)
+print(tupple)
+#if you try to update the value or append or popa tuppple it will fail with an error
+# you can reinitialized a tupple but not change it
+
+tupple = (7,8,2,9,6,3)
+print(tupple)
+ 
+
+# we can update a tupple but we have to make a new one 
+newtup = (49,) + tupple[0:]
+#note you do need the comma after the value so the interpreter knows this is tupple
+print(newtup)
+
+for t in tupple:
+    print(t)

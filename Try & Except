@@ -1,0 +1,33 @@
+# TRY AND EXCEPT    
+    
+"""
+The try block lets you test a block of code for errors.
+
+The except block lets you handle the error.
+
+The else block lets you execute code when there is no error.
+
+The finally block lets you execute code, regardless of the result of the try- and except blocks.
+"""
+
+
+#raise 
+
+x = "hello"
+if not type (x) == int:
+    raise TypeError("only string baby")
+
+#we can raise as many errors we want 
+#there are different types of error like exception, runtime , type error, and others
+
+#  try and Except 
+try:#test a block of code for error
+    print(x)
+except:#handles the error
+    print("error occured")
+else:#it will run if no erroes were raised
+    print("nothing happen")
+finally:
+    print("try except is finished ")
+    #it will run regardless the try block raise the error
+    

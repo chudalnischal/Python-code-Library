@@ -1,0 +1,19 @@
+#for creating a function we cann use 
+def add(numa, numb):
+    result = numa + numb
+    print (result)
+    return result
+#we can aslo return the value by 
+#instead of printing the result we can type
+add(5,4)
+
+
+
+#using import module function
+import random
+for i in range(10):
+    x = random.randint(0, 10)
+    print (x)
+#this will generates random number from t to 10
+
+

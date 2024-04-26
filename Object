@@ -1,0 +1,109 @@
+import random
+from typing import Self
+class gengar:
+    hp = 100
+    level = 25
+    attackvalue = 261
+    # def arethe things that this object will do like function
+    defValue = 150
+    type = {'ghost','poison'}
+    
+    def hex(self): #METHODSSSS
+        pass  # passing
+
+# to use the varibale inside the object we use the self variable 
+#so that we can use the varibale 
+
+    def suckerPunch(self):  #METHOD
+        #  SELF can access the attributes and methods of the class in Python.
+        damage = random.randint(15,25)
+        print(f"ypu did { damage} damagae!")
+
+    def levelup(self,): #METHOD
+        #self is need to be connected with the variable name to use this
+        self.level = self.level + 1
+        print(f"you are now lwvwl {self.level}")
+
+pokemon = gengar() #instantiating the claass
+pokemon.suckerPunch() # calling the methods to run
+pokemon.levelup() # it will runt the methods of the class
+
+
+
+# new classs implement
+class lunchBreak:
+    breaks = 0 #attributes
+    meals = [] # attributes in which we pass the value 
+
+
+    def breaktaken(self):
+        self.breaks = self.breaks + 1
+        print(f"i have taken {self.breaks} lunch breaks")
+
+
+    def lunchmeals(self,food,cook):
+        # it means that we are using meals from the class attributes
+        #and we are going to pass value in the list of meals
+        self.meals.append(food) # need to use self to call the variable
+        self.meals.append(cook) 
+        print(self.meals)
+#end of the object
+
+lunchtaken = lunchBreak() # creating the instance of the class or classs instantiation
+lunchtaken.breaktaken()
+lunchtaken.lunchmeals('pizza', 'Bread') # passing the value to the lunch meals
+
+
+    
+# class learning now 
+class nischal:
+    x = 5
+    y = 6
+    z = 7
+    
+p1 =nischal()
+print(p1.x)
+
+# using inuit methods so that it can directly assign the value of 
+# that we have passed it to the paramenters
+class hacking:
+    def __init__(self,a,b):
+        self.a = a
+        self.b = b
+classy = hacking("aunty","bunty")
+print(classy.b)
+
+#-str- fucntion in the classes
+#controls what should be returned when the class obj is rep as as string
+class hacking:
+    def __init__(self,a,b):
+        self.a = a
+        self.b = b
+    def __str__(str):
+        return f"{self.a}({self.b})"
+    def naming(self):
+        print("the letter is:",self.b)
+classy = hacking("aunty","bunty")
+classy.naming()
+
+"""inheritance in class """
+#to create a child class that inherits the proprties and methods from the
+#another vlass just send the parents class as a parameter in the child class
+
+#when you add your own methods and the properties it will overwrite
+#the parents methods and properties 
+#so those properties of the parent class will not work
+
+class mass (classy):
+    def _init_ (self,a,b):
+        hacking.__init__(self,a,b)
+    # can use super()  it inherit all the meth and prop from its parents
+# so i added the inuit function so it override the parent inuit
+#but i dontwant it to do it so i added a cal to parents inuit method from the 
+#child method
+
+
+#if you write a child class with the same name as a function in 
+#the parent class, the inheritance of the parent method will    
+#be overridden
+

@@ -1,0 +1,50 @@
+import re
+#importing the regular module in the py
+x = " my name is nischal chudal and i am cs student"
+find = re.search("cs",x)
+print ("find")
+if (find):
+    print("its a match")
+else:
+    print("fails")
+"""in Python, regular expressions are a powerful tool 
+for working with text data. They enable you to search for
+and match specific character patterns within a string."""
+
+
+#findall()
+#The findall() function returns a list containing all matches.
+txt = "nischal is done "
+y = re.findall("is",txt)
+print(y)
+"""The list contains the matches in the order they are found.
+
+If no matches are found, an empty list is returned:"""
+
+#search()
+#The search() function searches the string for a match, and returns a Match object if there is a match.
+#If there is more than one match, only the first occurrence of the match will be returned:
+import re
+
+txt = "The rain in Spain"
+x = re.search("\s", txt)
+
+print("The first white-space character is located in position:", x.start())
+
+#split() function
+#it splits at each white character
+import re
+
+txt = "The rain in Spain"
+x = re.split("\s", txt)
+print(x)
+
+#the sub funcion 
+#it replace the matches with the text of your choices 
+#Replace every white-space character with the number 9:
+
+import re
+
+txt = "The rain in Spain"
+x = re.sub("\s", "9", txt)
+print(x)

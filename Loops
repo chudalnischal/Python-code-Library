@@ -1,0 +1,68 @@
+
+
+#for loops continue and iteration
+n = 5
+while n > 5: # it is a while loop
+    print(n)
+    n = n + 1
+print("blastoff")
+
+fruits = [ "apple ", "banan", "cherry" ]
+for friens in fruits:
+    print("eat the ",friens )
+print("done")
+
+#lab iteration practise
+for num in range (5):
+    print ("attemped was made:", num)
+    if num == 2:
+        print("we have found success")
+        break
+else:
+        print("dont loose hope try again")
+""" it will add the iteration"""
+add = 0
+for num in (3, 4, 5, 6, 7, 8 ,9):
+     add+= num 
+     print("the count is :", add)
+print("the final count is" ,add)
+
+
+
+""" THE   WHILE LOOP    STARTS"""
+
+#it is a while statement where we uses break syntax to break the infinite looop
+j = 15
+while j > 11:
+    print(j)
+    j = j + 1
+    if j >= 1000:
+        print("stuck")
+        break
+print("job done")    
+
+#this loops will run until the statement will be correct 
+while True:
+     line = input("enter any thing:")
+     if line == "done":
+          break
+     else:
+          print("again")
+print("exiting the loop")
+""" this loops uses continus 
+ stsement whenever the user input ok
+ the loop will start over"""
+while True:
+     print("enter")
+     line = input("enter something")  
+     if line == "ok":
+          print("starting again")
+          continue
+     if line == "dog":
+          print("ok")
+          break
+print("done")
+
+  
+
+
