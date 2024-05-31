@@ -1,0 +1,147 @@
+1 Stack:
+
+stack is a simple data structure which stores the elements like a pile of plates.
+
+suppose 10 pile of plates are stacked on top of one other with 1 at the bottom and the 10 at the top. if we need to remove 5 which is in between the pile of plates we have to remove 10,9,8,7,6 and then only 5. 
+
+this procedures of depletion is called LIFO (last in first out). the things that comes at the last will be removed at first.
+
+
+the basic operation in the stack are :
+
+Push — Adding element at the top of the stack
+Pop — Removing the top element from stack
+isEmpty — Check if stack is empty or not
+peek — Finding the top element from stack
+isFull — Check if stack is full or not
+
+
+##the use of this stack implentation are:
+#brouwsers back button to keep the track of all urls visited earliers 
+
+#reverse a string 
+
+ 
+ ##### code fro implementing Stack 
+
+class stack:
+    def __init__(self):
+        self.stack = []
+
+    def push(self, element):
+        return self.stack.append(element)
+    
+    def pop(self):
+        return self.stack.pop()
+    
+    def isEmpty(self):
+        return len(self.stack) == 0
+    
+    def peek(self):
+        if len(self.stack) != 0:
+         return self.stack[-1]
+        else:
+            return "Stack is Empty"
+    
+
+create_stack = stack()
+create_stack.push(5)
+create_stack.push(2)
+create_stack.push(3)
+create_stack.push(4)
+
+print(create_stack.stack)
+
+create_stack.pop()
+create_stack.peek()
+create_stack.isEmpty()
+create_stack.peek()
+
+
+2. QUEUE:
+
+Queue is also the data structure which follows the same operation as queue or sequential order in real life.
+
+like when we are standing in a line to get a ticket for a movie. the person wo buy first and stand in a front of a line will enter the theatre room first. it follows the FIFO method (First in first Out). 
+
+
+
+
+Basic operation in Queue
+Enqueue — Appending elements at the end of the queue
+Dequeue — Removing element from the front of the queue
+IsEmpty — Check if the queue is empty
+IsFull — Check if the queue is full
+Peek — Get the value of the front of the queue without removing it
+
+### code for implementing queue is almost the same as stack
+
+class Queue:
+    def __init__(self):
+        self.queue = []
+
+    def enqueue(self, element):
+        return self.queue.append(element)
+    
+    def dequeue(self):
+        return self.queue.pop(0)
+    
+    def isEmpty(self):
+        return len(self.queue) == 0
+    
+    def peek(self):
+        if len(self.queue) != 0:
+            return self.queue[0]
+        else:
+            return "Queue is Empty"
+        
+        
+create_queue = Queue()
+create_queue.enqueue(1)
+create_queue.enqueue(2)
+create_queue.enqueue(3)
+
+create_queue.dequeue()
+create_queue.peek()
+
+create_queue.dequeue()
+create_queue.dequeue()
+create_queue.isEmpty()
+
+
+## Other Types of Queue:
+
+Circular Queue — In a circular queue, the last element points to the first element making a circular link.
+Priority Queue — Its a special type of queue in which each element is associated with a priority and is served according to its priority. If elements with the same priority occur, they are served according to their order in the queue.
+
+
+
+3. HEAP
+
+it is complete binary tree that satisfies the heap property
+
+there are 2 types of heap 
+a. Max-Heap:
+ a max-heap, the value of each parent node is greater than or equal to the values of its children. Therefore, the largest element is always at the root of the heap.
+
+
+        9
+       / \
+      5   8
+     / \ / \
+    4  3 7  6
+The root node 9 is the largest element.
+Each parent node (9, 5, 8) is greater than or equal to its children (5, 8, 4, 3, 7, 6).
+
+
+b. Min-Heap:
+In a min-heap, the value of each parent node is less than or equal to the values of its children. Consequently, the smallest element is always at the root of the heap. 
+
+        1
+       / \
+      3   6
+     / \ / \
+    5  9 8  7
+
+The root node 1 is the smallest element.
+Each parent node (1, 3, 6) is less than or equal to its children (3, 6, 5, 9, 8, 7).
