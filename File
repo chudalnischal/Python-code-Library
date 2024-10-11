@@ -3,34 +3,26 @@
       a = append
       r+ = read and write """
 f = open("sample.txt", "r" )
+
 # must be in the same folde if not you have to specify the path of it
 print (f.name)
 print (f.mode)
+
 wholefile = f.read() #reads entire text file
 print (wholefile)
+
 f_specific = f.read(20)# reads first 20 character
 print (f_specific)
+
 f_specific2 = f.read(20)# reads another 20 character after first one
 print (f_specific2)
+
 f_readLine = f.readline()# first line of the text
 print (f_readLine)
+
 f_readLine2 = f.readline()# secondline of the text
 print (f_readLine2)
+
 for line in f:
     print (line)
 f.close() #closing the file
-
-
-# to delete the file we must import os module and run its 
-#os.remove() function
-
-import os
-os.remove("filename.txt")
-
-# it is always better to check whether the file exist 
-#or not before deleteing because you may get error
-
-os.rmdir("folder")
-#it delete the entire folder
-#we can only remove empty folders
- 
