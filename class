@@ -54,15 +54,6 @@ lunchtaken.breaktaken()
 lunchtaken.lunchmeals('pizza', 'Bread') # passing the value to the lunch meals
 
 
-    
-# class learning now 
-class nischal:
-    x = 5
-    y = 6
-    z = 7
-    
-p1 =nischal()
-print(p1.x)
 
 # using inuit methods so that it can directly assign the value of 
 # that we have passed it to the paramenters
